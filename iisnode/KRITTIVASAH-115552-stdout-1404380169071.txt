@@ -1,0 +1,9 @@
+info: socket.io started
+Express server listening on port \\.\pipe\4fa5be37-a178-4eed-b038-0c58078e95ab
+[90mGET / [32m200 [90m110ms - 769[0m
+[90mGET /header.css [33m400 [90m4ms[0m
+[90mGET / [32m200 [90m8ms - 769[0m
+[90mGET / [32m200 [90m6ms - 769[0m
+[90mGET /header.css [33m400 [90m1ms[0m
+[90mGET /cricket/upcomingMatche [33m400 [90m2ms[0m
+[90mGET /cricket/upcomingMatches [32m200 [90m4680ms - 4.78kb[0m

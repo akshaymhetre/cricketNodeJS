@@ -1,0 +1,48 @@
+info: socket.io started
+Express server listening on port \\.\pipe\07d0e9d5-ea73-4976-9f27-5b8bc6754b38
+[90mGET / [32m200 [90m17ms - 769[0m
+[90mGET /header.css [33m400 [90m4ms[0m
+debug: served static content /socket.io.js
+debug: client authorized
+info: handshake authorized HyAol2duE_zWEYIINH9x
+debug: setting request GET /socket.io/1/websocket/HyAol2duE_zWEYIINH9x
+debug: set heartbeat interval for client HyAol2duE_zWEYIINH9x
+debug: client authorized for 
+debug: websocket writing 1::
+debug: set close timeout for client HyAol2duE_zWEYIINH9x
+info: socket error Error: write EPIPE
+    at errnoException (net.js:901:11)
+    at Socket._write (net.js:643:26)
+    at doWrite (_stream_writable.js:221:10)
+    at writeOrBuffer (_stream_writable.js:211:5)
+    at Socket.Writable.write (_stream_writable.js:180:11)
+    at Socket.write (net.js:613:40)
+    at WebSocket.write (C:\akshay backup\Documents\My Web Sites\cricaddict\node_modules\socket.io\lib\transports\websocket\hybi-16.js:190:19)
+    at WebSocket.Transport.onDispatch (C:\akshay backup\Documents\My Web Sites\cricaddict\node_modules\socket.io\lib\transport.js:222:10)
+    at Manager.onDispatch (C:\akshay backup\Documents\My Web Sites\cricaddict\node_modules\socket.io\lib\manager.js:392:31)
+    at SocketNamespace.packet (C:\akshay backup\Documents\My Web Sites\cricaddict\node_modules\socket.io\lib\namespace.js:156:16)
+debug: websocket writing 5:::{"name":"this","args":[{"will":"be received by everyone"}]}
+debug: setting request GET /socket.io/1/xhr-polling/HyAol2duE_zWEYIINH9x?t=1397814041936
+debug: setting poll timeout
+debug: clearing poll timeout
+debug: xhr-polling writing �44�5:::{"name":"upcomingMatches","args":[null]}�39�5:::{"name":"liveScores","args":[null]}�46�5:::{"name":"liveScoresSummery","args":[null]}
+debug: set close timeout for client HyAol2duE_zWEYIINH9x
+debug: discarding transport
+debug: cleared close timeout for client HyAol2duE_zWEYIINH9x
+debug: cleared heartbeat interval for client HyAol2duE_zWEYIINH9x
+debug: setting request GET /socket.io/1/xhr-polling/HyAol2duE_zWEYIINH9x?t=1397814041973
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client HyAol2duE_zWEYIINH9x
+debug: setting request GET /socket.io/1/jsonp-polling/HyAol2duE_zWEYIINH9x?t=1397814051939&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: clearing poll timeout
+debug: clearing poll timeout
+debug: jsonppolling writing io.j[0]("8::");
+debug: set close timeout for client HyAol2duE_zWEYIINH9x
+debug: jsonppolling closed due to exceeded duration
+debug: setting request GET /socket.io/1/jsonp-polling/HyAol2duE_zWEYIINH9x?t=1397814071979&i=0
+debug: setting poll timeout
+debug: discarding transport
+debug: cleared close timeout for client HyAol2duE_zWEYIINH9x

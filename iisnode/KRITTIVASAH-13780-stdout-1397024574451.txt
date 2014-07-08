@@ -1,0 +1,7 @@
+Express server listening on port \\.\pipe\bf372364-d3b3-427d-893c-986ffddc4530
+[90mGET / [32m200 [90m47ms - 769[0m
+[90mGET /header.css [33m400 [90m4ms[0m
+[90mGET / [32m200 [90m2ms - 769[0m
+[90mGET / [32m200 [90m4ms - 769[0m
+[90mGET /header.css [33m400 [90m3ms[0m
+[90mGET /cricket/upcomingMatches [32m200 [90m6495ms - 4.55kb[0m

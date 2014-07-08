@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"KRITTIVASAH-115552-stdout-1404380169071.txt","computername":"KRITTIVASAH","pid":115552,"type":"stdout","created":1404380169071},{"file":"KRITTIVASAH-13780-stdout-1397024574451.txt","computername":"KRITTIVASAH","pid":13780,"type":"stdout","created":1397024574451},{"file":"KRITTIVASAH-17676-stderr-1397112432754.txt","computername":"KRITTIVASAH","pid":17676,"type":"stderr","created":1397112432754},{"file":"KRITTIVASAH-17676-stdout-1397112432746.txt","computername":"KRITTIVASAH","pid":17676,"type":"stdout","created":1397112432746},{"file":"KRITTIVASAH-18776-stdout-1397111074940.txt","computername":"KRITTIVASAH","pid":18776,"type":"stdout","created":1397111074940},{"file":"KRITTIVASAH-205252-stderr-1404467959521.txt","computername":"KRITTIVASAH","pid":205252,"type":"stderr","created":1404467959521},{"file":"KRITTIVASAH-205276-stderr-1404467992673.txt","computername":"KRITTIVASAH","pid":205276,"type":"stderr","created":1404467992673},{"file":"KRITTIVASAH-205588-stderr-1404467778626.txt","computername":"KRITTIVASAH","pid":205588,"type":"stderr","created":1404467778626},{"file":"KRITTIVASAH-205588-stdout-1404467778582.txt","computername":"KRITTIVASAH","pid":205588,"type":"stdout","created":1404467778582},{"file":"KRITTIVASAH-20648-stderr-1397649864672.txt","computername":"KRITTIVASAH","pid":20648,"type":"stderr","created":1397649864672},{"file":"KRITTIVASAH-20648-stdout-1397649864605.txt","computername":"KRITTIVASAH","pid":20648,"type":"stdout","created":1397649864605},{"file":"KRITTIVASAH-208048-stderr-1404467789673.txt","computername":"KRITTIVASAH","pid":208048,"type":"stderr","created":1404467789673},{"file":"KRITTIVASAH-208048-stdout-1404467789663.txt","computername":"KRITTIVASAH","pid":208048,"type":"stdout","created":1404467789663},{"file":"KRITTIVASAH-208352-stderr-1404467816251.txt","computername":"KRITTIVASAH","pid":208352,"type":"stderr","created":1404467816251},{"file":"KRITTIVASAH-208352-stdout-1404467816244.txt","computername":"KRITTIVASAH","pid":208352,"type":"stdout","created":1404467816244},{"file":"KRITTIVASAH-208412-stdout-1404468043644.txt","computername":"KRITTIVASAH","pid":208412,"type":"stdout","created":1404468043644},{"file":"KRITTIVASAH-208712-stdout-1404485862443.txt","computername":"KRITTIVASAH","pid":208712,"type":"stdout","created":1404485862443},{"file":"KRITTIVASAH-21344-stdout-1397813967162.txt","computername":"KRITTIVASAH","pid":21344,"type":"stdout","created":1397813967162},{"file":"KRITTIVASAH-25712-stdout-1397813304615.txt","computername":"KRITTIVASAH","pid":25712,"type":"stdout","created":1397813304615},{"file":"KRITTIVASAH-44400-stdout-1404824078096.txt","computername":"KRITTIVASAH","pid":44400,"type":"stdout","created":1404824078096},{"file":"KRITTIVASAH-9088-stdout-1397814105233.txt","computername":"KRITTIVASAH","pid":9088,"type":"stdout","created":1397814105233}];
+        var lastUpdated = 1404824082955;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>

@@ -1,4 +1,0 @@
-Socket.IO's `listen()` method expects an `http.Server` instance
-as its first parameter. Are you migrating from Express 2.x to 3.x?
-If so, check out the "Socket.IO compatibility" section at:
-https://github.com/visionmedia/express/wiki/Migrating-from-2.x-to-3.x
